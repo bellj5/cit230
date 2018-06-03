@@ -1,0 +1,15 @@
+@media only screen and (min-width: 1000px ) {
+  .home-nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .nav-expand {
+    display: none;
+  }
+
+  section.forecast {
+    display: block;
+  }
+}
