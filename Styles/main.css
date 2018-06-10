@@ -9,6 +9,9 @@ body {
     line-height: 32px;
     font-family: sans-serif;
     color: lightblue;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 h1 {
@@ -22,10 +25,9 @@ h2 {
     border-bottom: 1px solid #bbb;
 }
 
-header, main, footer {
-    margin: 1.25rem auto;
+header, nav, main, footer {
     padding: .5rem;
-    max-width: 500px;
+    flex: 1 auto;
 }
 
 header, footer, footer a {
