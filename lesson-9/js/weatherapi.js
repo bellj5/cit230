@@ -1,6 +1,6 @@
 let request = new XMLHttpRequest();
 let key = 'a03b5599f343b6278635a5034e29a0e2';
-let requestUrl = 'http://api.openweathermap.org/data/2.5/forecast?id=4483478&APPID=' + key;
+let requestUrl = 'https://api.openweathermap.org/data/2.5/forecast?id=4483478&APPID=' + key;
 
 request.open('GET', requestUrl);
 request.responseType = 'json';

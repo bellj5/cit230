@@ -1,6 +1,6 @@
 let franklinRequest = new XMLHttpRequest();
 let franklinKey = 'a03b5599f343b6278635a5034e29a0e2';
-let franklinRequestUrl = 'http://api.openweathermap.org/data/2.5/forecast?id=4156209&APPID=' + franklinKey;
+let franklinRequestUrl = 'https://api.openweathermap.org/data/2.5/forecast?id=4156209&APPID=' + franklinKey;
 
 franklinRequest.open('GET', franklinRequestUrl);
 franklinRequest.responseType = 'json';
@@ -13,7 +13,7 @@ franklinRequest.onload = function() {
 
   let imgData = weatherData.list[0].weather[0].icon;
   let img = document.createElement('img');
-  img.src = 'http://openweathermap.org/img/w/' + imgData + '.png';
+  img.src = 'https://openweathermap.org/img/w/' + imgData + '.png';
   img.alt = 'weather icon';
   img.style.width = '40px';
   document.getElementById('icon').appendChild(img);
