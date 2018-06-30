@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="This is an assignment for CIT 230">
+  <title>Greenville Weather Page</title>
+  <link rel="stylesheet" href="/styles/normalize.css">
+  <link rel="stylesheet" href="styles/main-5.css">
+  <link rel="stylesheet" href="styles/medium-5.css">
+  <link rel="stylesheet" href="styles/large-5.css">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+<body class="flex-container">
+
+  <header>
+  </header>
+
+  <header id="header"></header>
+  <div id="mainPicture"></div>
+  <main class="flex-child">
+    <h2>Greenville</h2>
+    <figure>
+    </figure>
+    <section class="weather-summary">
+      <h1 class="greenville-info">Greenville Information</h1>
+      <div id="icon" class="greenville-info"></div>
+      <div id="greenville-container"></div>
+    </section>
+
+    <article>
+      <h3>Greenville Weather</h3>
+      <img src="images/sunnyDay.jpeg" alt="sunny">
+      <p class="town-article">
+        Greenville has had a streak of wonderful weather in the recent past. Local parks and communities
+        are all basking in the warm light of the weather here in Greenville, and tourism has been at an
+        all time high. Come and see!
+      </p>
+    </article>
+
+  </main>
+
+  <footer class="flex-child" id="footer"></footer>
+
+  <script src="js/loadHTML.js"></script>
+  <script src="js/greenvilleapi.js"></script>
+</body>
+</html>

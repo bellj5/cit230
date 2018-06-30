@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="This is an assignment for CIT 230">
+  <title>Franklin 5 Weather Page</title>
+  <link rel="stylesheet" href="styles/main-5.css">
+  <link rel="stylesheet" href="styles/medium-5.css">
+  <link rel="stylesheet" href="styles/large-5.css">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+<body class="flex-container">
+
+  <header>
+  </header>
+
+  <header id="header"></header>
+  <div id="mainPicture"></div>
+  <main class="flex-child">
+    <h1>Report a Storm</h1>
+
+    <form action="thanks.html">
+      <label for="fullName">Full Name</label>
+      <input type="text" required pattern=".{6,}" name="fullName" id="fullName">
+
+      <label for="email">Email</label>
+      <input type="email" placeholder="email@example.com" name="email" id="email">
+
+      <label for="phoneNumber">Phone Number</label>
+      <input type="tel" required name="phoneNumber" id="phoneNumber">
+
+      <label for="zip">Zipcode</label>
+      <input type="number" required name="zip" id="zip">
+
+      <label for="stormDate">Storm Date</label>
+      <input type="date" name="stormDate" id="stormDate">
+
+      <label for="stormType">Storm Type</label>
+      <input list="typeList" id="stormType">
+      <datalist id="typeList">
+        <option value="Flash Flood"></option>
+        <option value="Hail"></option>
+        <option value="Hurricane"></option>
+        <option value="Thunderstorm"></option>
+        <option value="Tornado"></option>
+      </datalist>
+
+      <label for="severity">Rating</label>
+      <input type="range"
+             name="stormSeverity"
+             id="severity"
+             value="5"
+             min="1"
+             max="10"
+             oninput="adjustSeverity(this.value)"
+             onchange="adjustSeverity(this.value)">
+      <span id="severityOutput">5</span>
+
+      <label for="stormRegion">Storm Region</label>
+      <select name="stormRegion" id="stormRegion">
+        <option selected disabled>Select Region...</option>
+        <option value="Franklin">Franklin</option>
+        <option value="Greenville">Greenville</option>
+        <option value="Springfield">Springfield</option>
+      </select>
+      <fieldset>
+        <legend>User In Danger?</legend>
+        <label for="danger-yes">Yes</label>
+        <input type="radio" name="danger" value="Yes" id="danger-yes">
+        <label for="danger-maybe">Maybe</label>
+        <input type="radio" name="danger" value="Maybe" id="danger-maybe">
+        <label for="danger-no">No</label>
+        <input type="radio" name="danger" value="No" id="danger-no">
+      </fieldset>
+      <label for="comments">Comments</label>
+      <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+      <input type="submit" value="Submit">
+    </form>
+  </main>
+
+  <footer class="flex-child" id="footer"></footer>
+
+  <script src="js/loadHTML.js"></script>
+  <script>
+    function adjustSeverity(severity) {
+      document.getElementById('severityOutput').innerHTML = severity;
+    }
+  </script>
+</body>
+</html>
